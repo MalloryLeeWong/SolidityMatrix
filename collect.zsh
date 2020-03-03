@@ -22,12 +22,13 @@ solcVersions=(
   '0.5.1'
 )
 
+# $1 : version
 function writeTruffleConfig() {
   cat << EOF > truffle/truffle-config.js
 module.exports = {
   compilers: {
     solc: {
-      version: "$version"
+      version: "$1"
     }
   }
 }
